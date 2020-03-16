@@ -1,0 +1,87 @@
+@import "../../mixins/gradients/linear-gradient.less";
+@import "../../mixins/gradients/radial-gradient.less";
+@import "../../mixins/gradients/radial-gradient-3color.less";
+@import "../../mixins/gradients/radial-gradient-sphere.less";
+
+/* variables */
+@padding-max:20px;
+@padding-med:10px;
+@padding-min:5px;
+
+@margin-max:20px;
+@margin-med:10px;
+@margin-min:5px;
+
+html, body {
+	height:100%;
+}
+
+* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+* { margin:0; padding:0 }
+
+body {
+	font-family:'Open Sans', Arial, Helvetica, sans-serif;
+	font-size:100%;
+	color:#000;
+	line-height:150%;
+}
+
+h1 {
+	font-size:3em;
+	vertical-align:middle;
+	margin:@margin-med;
+}
+
+h2 {
+	font-size:2.5em;
+}
+
+h3 {
+	font-size:2em;
+}
+
+h4 {
+	font-size:1.5em;
+}
+
+h5 {
+	font-size:1.2em;
+}
+
+h6 {
+	font-size:1em;
+}
+
+div.linear {
+	height:100%;
+	width:50%;
+	float:left;
+	text-align:left;
+	.linear-gradient(left bottom, left top, #930, #cf0); 
+}
+
+div.radial {
+	height:100%;
+	width:50%;
+	float:left;
+	text-align:left;
+	.radial-gradient(50%, 50%, circle, cover, #00f, 30%, #fff, 100%);
+}
+
+div.radial-3color {
+	height:100%;
+	width:50%;
+	float:left;
+	text-align:left;
+	.radial-gradient-3color(circle, #9ff 10%, #0f0 30%, #ff0 90%);
+	
+}
+
+div.sphere {
+	height:100%;
+	width:50%;
+	border-radius: 50%;
+	float:left;
+	text-align:left;
+	.radial-gradient-sphere(#9f0);
+}
